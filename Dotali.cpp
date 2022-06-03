@@ -1,20 +1,54 @@
-// Dotali.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include "Menu.h"
 
 #include <iostream>
+#include <string>
 
-int main()
-{
+
+// THIS FILE SHOULD ONLY HAVE MAIN LOOP AT THE END
+
+int main() {
     std::cout << "Hello World!\n";
+
+    bool running = true;
+    int menuResult, gameResult;
+
+    while (running) {
+
+        menuResult = runMenu(window); // 1 to 4 is the world
+
+        if (!menuResult) running = false;
+
+        // Open a world
+        else if (menuResult < 5) {
+            /*
+            // Create a thread for the server
+            if (createServer()) {
+                std::cout << "Error with server" << std::endl;
+            }
+
+            gameResult = createGameInstance();
+
+            closeServer();
+
+            if (gameResult == 1) running = false; // quit if result is 1 else go the the menu again
+            */
+        }
+    }
+
+    window.close();
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+//class gameInstance()
+int gameLoop() {
+
+    bool running = true;
+
+    while (running) {
+
+
+    }
+
+
+}
